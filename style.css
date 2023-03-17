@@ -84,12 +84,13 @@ select {
 
 main {
   display: flex;
+  align-items: center;
   padding: 1rem;
 }
 
 img {
   max-height: auto;
-  margin-bottom: -6vh;
+  margin-bottom: 3rem;
 }
 
 .container {
