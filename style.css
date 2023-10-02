@@ -43,7 +43,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #c6c6c6;
+  background-image: linear-gradient(
+    to bottom,
+    #c2c4c5,
+    #d1d2d3,
+    #e0e1e2,
+    #f0f0f0,
+    #ffffff
+  );
 }
 
 /* A elements that don't have a class get default styles */
