@@ -9,21 +9,210 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
   </head>
   <body>
+    <header>
+      <div class="head-container">
+        <div class="navbar">
+          <img src="./images/white-logo.png" alt="habilis services logo" />
+          <ul>
+            <a href="#services"><li>Services</li></a>
+            <a href="#contact"><li>Contact Us</li></a>
+            <a href=""></a><li>About Us</li></a>
+          </ul>
+          <div class="hamburger">&#9776;</div>
+        </div>
+        <section class="hero">
+          <div class="hero-text">
+            <h1>Device Management: Your Solution Starts Here</h1>
+            <p>
+              Empower Your Mobile Workforce with Expert Device Management
+              Solutions. Streamline Security, Enhance Productivity, and Simplify
+              IT Management with Our Consultancy Services.
+            </p>
+          </div>
+          <div class="hero-img">
+            <img
+              src="./images/mac-phone-cup.png"
+              alt="image of computer and phone with a cup and pot plant"
+            />
+          </div>
+        </section>
+      </div>
+    </header>
+
     <main>
-      <div class="container">
-        <img
-          src="images/logo-nobackground-500.png"
-          alt="habilis services logo"
-        />
-        <div class="container-item">
-          <h1>Website Under Construction!</h1>
+      <section id="services" class="services">
+        <div class="services-text">
+          <h2>What We Do</h2>
           <p>
-            While the site is being built, if you have any Digital Workplace
-            projects you would like to discuss, please contact us via email:
-            info@habilisservices.co.uk.
+            At our core, we are your dedicated partners in crafting innovative
+            solutions tailored to your unique needs. From the initial stages of
+            collaborative design to the seamless implementation of cutting-edge
+            technologies, we stand by your side every step of the way. Our
+            commitment extends beyond project completion, as we provide
+            continuous training and unwavering support to ensure your success.
+            Additionally, our team of experts excels in platform migration,
+            offering seamless transitions to propel your business forward.
+            Experience the difference with our holistic approach to service
+            delivery.
           </p>
         </div>
-      </div>
+        <div class="services-cards">
+          <div class="services-card">
+            <div class="card-img">
+              <img src="./images/mind-map-24 1.png" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>Design & Implement</h3>
+              <p>
+                Work together to build the perfect solution whether on Jamf,
+                Intune, Workspace ONE or another platform.
+              </p>
+            </div>
+          </div>
+          <div class="services-card">
+            <div class="card-img">
+              <img src="./images/coach-85 1.png" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>Training & Support</h3>
+              <p>
+                Project completion doesn’t have to mean the end. We are here to
+                train and support you to ensure you get the best experience from
+                your solution.
+              </p>
+            </div>
+          </div>
+          <div class="services-card">
+            <div class="card-img">
+              <img src="./images/migration-graphic.png" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>Migration</h3>
+              <p>
+                Moving from one platform to another? We can help there too and
+                make it as painless as possible!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+          <div class="contact-text">
+            <h3>Get in Touch with Us Today</h3>
+            <p>
+              Have a question, need assistance, or ready to start a project?
+              We're here to help. Reach out to us via phone, email, or the
+              contact form. Our team is eager to hear from you and discuss how
+              we can support your goals. Let's connect and explore the
+              possibilities together
+            </p>
+            <div class="contact-info">
+              <p>
+                Email:
+                <a href="mailto:info@habilisservices.co.uk"
+                  >info@habilisservices.co.uk</a
+                >
+              </p>
+              <p>Tel: 01525 887340</p>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form
+              action="https://formkeep.com/f/0345140f0438"
+              accept-charset="UTF-8"
+              enctype="multipart/form-data"
+              method="POST"
+            >
+              <label for="fname">First Name</label><br />
+              <input type="text" id="fname" name="fname" required /><br /><br />
+
+              <label for="lname">Last Name</label><br />
+              <input type="text" id="lname" name="lname" required /><br /><br />
+
+              <label for="email">Email</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+              /><br /><br />
+
+              <label for="phone">Phone No</label><br />
+              <input type="tel" id="phone" name="phone" /><br /><br />
+
+              <label for="company">Company Name</label><br />
+              <input
+                type="text"
+                id="company"
+                name="company"
+                required
+              /><br /><br />
+
+              <label for="subject">Subject</label><br />
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+              /><br /><br />
+
+              <label for="message">Message</label><br />
+              <textarea id="message" name="message" rows="4" required></textarea
+              ><br /><br />
+
+              <input id="submit-btn" type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <p>
+        &copy; <span id="copyright-year"></span> Habilis Services Ltd |
+        Registered in England No. 12297769
+      </p>
+    </footer>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const currentYear = new Date().getFullYear(); // Gets the current year
+      document.getElementById("copyright-year").textContent = currentYear; // Sets the year in the span
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".navbar ul");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close the menu when a menu item is clicked
+    document.querySelectorAll(".navbar ul li a").forEach((item) => {
+      item.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+
+    // Close the menu when any part of the screen is tapped outside the menu
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".navbar")) {
+        navLinks.classList.remove("active");
+      }
+    });
+  </script>
 </html>
