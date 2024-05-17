@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Habilis Services</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon-dark.ico" />
   </head>
   <body>
     <header>
@@ -175,6 +175,26 @@
       </p>
     </footer>
   </body>
+  <script>
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const favicon = document.getElementById('favicon');
+
+    const updateFavicon = () => {
+        if (darkModeMediaQuery.matches) {
+
+            favicon.href = '/images/favicon-dark.ico';
+        } else {
+
+            favicon.href = '/images/favicon-light.ico';
+        }
+    };
+
+    darkModeMediaQuery.addEventListener('change', updateFavicon);
+
+    updateFavicon(); // Initial call to set the favicon based on the initial color scheme
+</script>
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
